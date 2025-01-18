@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bini - Artist Homepage</title>
+    <link rel="stylesheet" href="home.css">
+    
+</head>
+<body>
+     <!-- Background Video -->
+    <video autoplay muted loop class="background-video">
+        <source src="maloi.mp4" type="video/mp4"> <!-- Replace with your video file path -->
+        Your browser does not support the video tag.
+    </video>
+    <header>
+        <div class="logo">Bini</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#video">Video</a></li> <!-- Updated Navigation -->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Bini World</h1>
+            <a href="#gallery" class="cta-button">View Bini Member</a>
+        </div>
+    </section>
+
+    <main>
+        <section id="about" class="about">
+            <h2>About Bini</h2>
+            <p>Bini is a popular Filipino girl group formed in 2021. Known for their catchy songs and energetic performances, they inspire fans with messages of empowerment and positivity. The group connects closely with their audience, called "BLOOM," through social media and engaging content. With their unique style and talent, Bini is on the rise in the music industry!</p>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="art1.jpg" alt="Art 1">
+                <img src="art2.jpg" alt="Art 2">
+                <img src="art3.jpg" alt="Art 3">
+                <img src="art4.jpg" alt="Art 4">
+                <img src="art5.jpg" alt="Art 5">
+                <img src="art6.jpg" alt="Art 6">
+                <img src="art7.jpg" alt="Art 7">
+                <img src="art8.jpg" alt="Art 8">
+            </div>
+        </section>
+        
+        <!-- Add the JavaScript at the bottom of your body -->
+        <script>
+            const galleryImages = document.querySelectorAll('.gallery-grid img');
+        
+            function showImages() {
+                const triggerBottom = window.innerHeight / 5 * 4;
+        
+                galleryImages.forEach(image => {
+                    const imageTop = image.getBoundingClientRect().top;
+        
+                    if (imageTop < triggerBottom) {
+                        image.classList.add('visible');
+                    } else {
+                        image.classList.remove('visible');
+                    }
+                });
+            }
+        
+            window.addEventListener('scroll', showImages);
+            showImages(); // Initial call to check if images are in view on page load
+        </script>
+        
+
+        <section id="services" class="services">
+            <h2>Services</h2>
+            <div class="service">
+                <h3>Live Peerfomance</h3>
+                <p>Watch Bini perform live shows filled with energy and talent as they sing their songs on stage.</p>
+            </div>
+            <div class="service">
+                <h3>Music Releases</h3>
+                <p>Listen to a variety of songs, from fun pop hits to emotional ballads, available on popular music platforms.</p>
+            </div>
+        </section>
+
+        <section id="video" class="video pink-background"> <!-- New Video Section -->
+            <h2 class="pink-text">Bini Concert</h2>
+            <video controls width="100%">
+                <source src="bini.mp4" type="video/mp4"> <!-- Replace with your video file -->
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        
+        
+
+        <section id="testimonials" class="testimonials">
+            <h2>Testimonials</h2>
+            <blockquote>"Bini's live performances are incredible! Their energy and passion make every show unforgettable. I love how they connect with the audience!"
+
+                - Maria L</blockquote>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Bini</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+ 
+    <footer>
+        <p>Connect with me on social media!</p>
+        <p>&copy; 2024 Bini. All rights reserved.</p>
+    </footer>
+</body>
+</html>

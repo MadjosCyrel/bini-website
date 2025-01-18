@@ -1,0 +1,179 @@
+/* Import Google Font for modern typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+/* Basic styling for the form */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('maloi.png'); /* High-quality background */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Overlay effect for better readability */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Slightly darker overlay */
+    z-index: -1;
+}
+
+/* Login container */
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.2); /* Light transparency */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+}
+
+.login-container:hover {
+    transform: scale(1.02); /* Slight zoom */
+}
+
+/* Heading styling */
+h2 {
+    color: rgb(255, 105, 180);
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Label styling */
+label {
+    color: rgb(240, 227, 235); /* Pink label */
+    margin-bottom: 8px;
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Input fields with pink styling */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(31, 18, 25, 0.7); /* Pink border */
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus effect for inputs */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #ff1493; /* Deeper pink */
+    box-shadow: 0 0 8px rgba(255, 105, 180, 0.8); /* Pink glow */
+}
+
+/* Placeholder text */
+input::placeholder {
+    color: rgba(255, 105, 180, 0.7); /* Light pink */
+}
+
+/* Submit button with gradient */
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(45deg, #ff69b4, #ff1493); /* Pink gradient */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+/* Hover effect for submit button */
+input[type="submit"]:hover {
+    background: linear-gradient(45deg, #ff1493, #ff69b4); /* Reverse gradient */
+    transform: scale(1.05);
+}
+
+/* Login button */
+.login-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: #ff0073;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover effect for login button */
+.login-button:hover {
+    background-color: #ec2086;
+    transform: scale(1.05);
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .login-container {
+        max-width: 90%;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+    .login-container {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="submit"] {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
